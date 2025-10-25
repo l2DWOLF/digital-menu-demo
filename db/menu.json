@@ -1,0 +1,103 @@
+{
+    "menu": [
+      {
+        "name": "סלט קיסר",
+        "description": "סלט חסה רומית עם קרוטונים, פרמזן ורוטב קיסר",
+        "price": 42.90,
+        "category": "סלטים",
+        "preparation_time": 10
+      },
+      {
+        "name": "סלט יווני",
+        "description": "סלט עגבניות, מלפפונים, בצל סגול, גבינת פטה וזיתי קלמטה",
+        "price": 39.90,
+        "category": "סלטים",
+        "preparation_time": 8
+      },
+      {
+        "name": "המבורגר קלאסי",
+        "description": "200 גרם בקר עם חסה, עגבנייה, בצל ורוטב הבית בלחמנייה קלויה",
+        "price": 64.50,
+        "category": "עיקריות",
+        "preparation_time": 15
+      },
+      {
+        "name": "שניצל ביתי",
+        "description": "שניצל עוף פריך בליווי פירה ותירס חמאה",
+        "price": 59.90,
+        "category": "עיקריות",
+        "preparation_time": 12
+      },
+      {
+        "name": "פיצה מרגריטה",
+        "description": "פיצה עם רוטב עגבניות, מוצרלה ובזיליקום טרי",
+        "price": 55.00,
+        "category": "פיצות",
+        "preparation_time": 12
+      },
+      {
+        "name": "פיצה פפרוני",
+        "description": "פיצה עם רוטב עגבניות, מוצרלה ופרוסות פפרוני חריף",
+        "price": 62.00,
+        "category": "פיצות",
+        "preparation_time": 14
+      },
+      {
+        "name": "פסטה רוזה",
+        "description": "פסטה פנה עם רוטב עגבניות, שמנת, שום ופרמזן",
+        "price": 58.90,
+        "category": "פסטות",
+        "preparation_time": 14
+      },
+      {
+        "name": "פסטה אלפרדו",
+        "description": "פסטה פטוצ'יני ברוטב שמנת, חמאה ופרמזן",
+        "price": 62.90,
+        "category": "פסטות",
+        "preparation_time": 13
+      },
+      {
+        "name": "סטייק אנטריקוט",
+        "description": "300 גרם אנטריקוט עסיסי על הגריל עם רוטב יין אדום",
+        "price": 129.90,
+        "category": "בשרים",
+        "preparation_time": 20
+      },
+      {
+        "name": "שיפודי פרגית",
+        "description": "שיפודי פרגית עסיסיים בליווי אורז ושעועית ירוקה",
+        "price": 79.90,
+        "category": "בשרים",
+        "preparation_time": 18
+      },
+      {
+        "name": "שייק מנגו בננה",
+        "description": "שייק מרענן עם מנגו, בננה, יוגורט ודבש",
+        "price": 29.90,
+        "category": "משקאות",
+        "preparation_time": 5
+      },
+      {
+        "name": "מיץ תפוזים טבעי",
+        "description": "מיץ תפוזים טבעי סחוט במקום",
+        "price": 24.90,
+        "category": "משקאות",
+        "preparation_time": 3
+      },
+      {
+        "name": "קרם ברולה",
+        "description": "קינוח צרפתי עם קרם וניל וקרמל מקורמל מעל",
+        "price": 36.00,
+        "category": "קינוחים",
+        "preparation_time": 8
+      },
+      {
+        "name": "עוגת שוקולד חמה",
+        "description": "עוגת שוקולד חמה עם כדור גלידת וניל",
+        "price": 38.00,
+        "category": "קינוחים",
+        "preparation_time": 10
+      }
+    ]
+  }
+  

@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scrollbar-color: #00aeffbb #353535;
+}
+
+h1 {
+  font-family: 'ChonBuri';
+  width: 90%;
+  color: #00ccffab;
+  text-align: center;
+  font-size: 3.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.548);
+  padding: 1em 1.5em 1.5em;
+
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  border: 1px solid black;
+  border-bottom: 1px solid snow;
+}
+h3 {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+h5 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #555555;
+  margin-bottom: 0.5rem;
+  text-shadow: none;
+  font-style: italic;
+}
+
+.toast-wrapper {
+  position: fixed;
+  top: 40px;
+  right: 0px;
+  z-index: 100;
+}
+.toast-container {
+  position: relative;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}

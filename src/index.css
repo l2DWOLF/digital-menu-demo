@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Chonburi&family=Goldman:wght@400;700&family=Assistant:wght@200..800&display=swap');
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: whitesmoke;
+  text-decoration: inherit;
+}
+
+body{
+  min-height: 100vh;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 100%;
+  min-height: calc(100vh - 65px);
+  overflow-x: hidden;
+}
+
+button {
+  padding: .2em 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #444746;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  user-select: none;
+  color: #00ccff;
+  background: none;
+
+  transition: .3s;
+}
+button:hover {
+  background-color: none;
+  background: #00ccff;
+  border: 1px solid white;
+  color: black;
+  transform: scale(1.05);
+  user-select: none;
+}
+
+input {
+  text-align: center;
+  border-radius: 10px;
+  padding: 8px 12px;
+  border: 1px solid #00ccff;
+  outline: none;
+  transition: all 0.3s ease;  
+  color: snow !important;
+}
+input:focus {
+  background: rgba(27, 140, 148, 0.438);
+  color: black;
+  font-weight: 600;
+  border: 2px solid #00ccff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
