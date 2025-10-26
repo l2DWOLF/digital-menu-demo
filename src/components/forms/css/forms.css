@@ -147,7 +147,37 @@ select {
 
 @media (max-width: 888px) {
     .form-container{
-        padding: 2em 0em !important;
-        max-width:85%;
+        top: 115px;
+        left: .5em;
+        min-width: 95%;
+    }
+    .item-form{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .input-field{
+        width: 100px;
+    }
+    .input-field label{
+        font-size: .8rem;
+    }
+    .input-field input{
+        color: black !important;
+    }
+    .input-field input::placeholder{
+        font-size: .8rem;
+    }
+    .form-btns-container{
+        grid-column: unset;
+        min-width: 100px;
+        max-width: 100px;
+        gap: 5px;
+    }
+    .submit-btn{
+        font-size: .85rem !important;
+        padding: 0px 8px;
+        align-self: end;
+        
     }
 }

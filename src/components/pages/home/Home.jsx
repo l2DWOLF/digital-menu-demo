@@ -103,7 +103,7 @@ function Home() {
                 <div className="tool-bar">
                     <button title="Reset DB" onClick={() => setFilterType("")}>All dishes</button>
                     <button title="Add new item" onClick={() => toggleForm("add")}>
-                        Add new item
+                        Add item
                     </button>
                     <button title="My dishes" onClick={() => setFilterType("my_dishes")}>
                         My dishes
@@ -174,8 +174,8 @@ function Home() {
                                     <th>#</th>
                                     <th>Name</th>
                                     <th>Category</th>
-                                    <th>Description</th>
-                                    <th>Prep Time</th>
+                                    <th className="mobile-hide">Description</th>
+                                    <th>Prep</th>
                                     <th>Price</th>
                                     <th>Manage</th>
                                 </tr>
@@ -186,7 +186,7 @@ function Home() {
                                         <td>{item.id}</td>
                                         <td>{item.name}</td>
                                         <td>{item.category}</td>
-                                        <td className="td-description">{item.description}</td>
+                                        <td className="td-description mobile-hide">{item.description}</td>
                                         <td>{item.preparation_time} דקות</td>
                                         <td>${item.price}</td>
                                         <td className="table-item-control">
@@ -211,11 +211,13 @@ function Home() {
                                 <img src={fallbackImage || ""} alt={`photo of ${item.name}`} />
                                 <div className="card-data">
                                     <h4>{item.name}</h4>
-                                    <h5>{item.category}</h5>
-                                    <p className="item-description">{item.description}.</p>
+                                    <h5 className="mobile-hide">{item.category}</h5>
+                                    <p className="item-description mobile-hide">{item.description}.</p>
                                     <div className="price-prep">
+                                        <p className="show-mobile">{item.category}</p>
                                         <p>{item.preparation_time} דקות</p>
                                         <p> {item.price} $</p>
+
                                     </div>
                                 </div>
                                 <div className="manage-card-item">
@@ -237,7 +239,7 @@ function Home() {
                         <ul>
                             <p>Categories:</p>
                             <li onClick={() => setFilterType("")} style={{ listStyleType: "none" }}>
-                                הצג את כל הקטגוריות
+                                הצג הכל
                             </li>
                             {categories.map((category, index) => (
                                 <li key={index} onClick={() => setFilterType(category)}
