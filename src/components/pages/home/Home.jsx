@@ -7,7 +7,7 @@ import { errorMsg, infoMsg, successMsg} from "../../../utils/toastify.js";
 
 function Home() {
     const [menu, setMenu] = useState([]);
-    const [viewMode, setViewMode] = useState("table");
+    const [viewMode, setViewMode] = useState("grid");
     const [formState, setFormState] = useState({open: false, item: null});
     const [searchQuery, setSearchQuery] = useState("");
     const [filterType, setFilterType] = useState("");
