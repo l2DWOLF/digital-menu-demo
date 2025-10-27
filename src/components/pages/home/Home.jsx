@@ -203,6 +203,7 @@ function Home() {
 
             <div className="menu-display">
                 <h3>Food Menu</h3>
+                <p className="items-counter">{menu.length} items</p>
                 {viewMode === "table" && (
                     <div className="table-view">
                         <table>
