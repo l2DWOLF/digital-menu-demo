@@ -5,20 +5,15 @@
     min-width: 100%;
     display: flex;
     align-items: center;
-    padding: 0em 8px 3px;
-    
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid snow;
+    padding: 0;
     border-radius: 5px;
     transition: .3s;
-    box-shadow: 0px 0px 10px 2px black;
     z-index: 100;
-    
 }
 
 .form-container:hover,
 .form-container:focus-within {
-    background-color: rgba(2, 2, 2, 0.5);
+    background-color: rgba(2, 2, 2, 0.2);
 }
 
 .item-form {
@@ -28,10 +23,13 @@
     padding: .3em;
     gap: .5em;
     
-    border-radius: 10px;
+text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.548);
+    padding: 1em 1.5em 1.5em;
 
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    border: 1px solid black;
+    border-bottom: 1px solid snow;
 }
 
 .input-field {
@@ -60,7 +58,7 @@
     text-shadow: 2px 1px 2px black;
 }
 .input-field input {
-    color: black;
+    color: black !important;
     font-weight: 600;
     padding: 16px 5px 2px;
     border-radius: 2px;
@@ -69,8 +67,8 @@
     background: linear-gradient(to bottom,
                 #000000 0%,
                 black 40%,
-                rgba(255, 255, 255, 0.826) 35%,
-                rgba(255, 255, 255, 0.826) 100%);
+                rgba(255, 255, 255, 0.926) 35%,
+                rgba(255, 255, 255, 0.956) 100%);
     border: 1px solid black;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.241);
 
@@ -148,8 +146,9 @@ select {
 @media (max-width: 888px) {
     .form-container{
         top: 115px;
-        left: .5em;
-        min-width: 95%;
+        left: -6px;
+        min-width: 100%;
+        max-width: 355px;
     }
     .item-form{
         width: 100%;

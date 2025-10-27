@@ -97,7 +97,76 @@
         "price": 38.00,
         "category": "קינוחים",
         "preparation_time": 10
-      }
+      },
+        {
+          "name": "Mixed Grill",
+          "description": "Skirt Steak, Rib-eye, Lamb-chops, Boneless-thigh, server with 3 sides.",
+          "price": 242.90,
+          "category": "Grill",
+          "preparation_time": 10
+        },
+        {
+          "name": "Ribeye Steak",
+          "description": "300g juicy ribeye grilled to perfection with a red wine reduction sauce.",
+          "price": 129.9,
+          "category": "Grill",
+          "preparation_time": 20
+        },
+        {
+          "name": "Chicken Skewers",
+          "description": "Tender grilled chicken skewers served with rice and green beans.",
+          "price": 79.9,
+          "category": "Grill",
+          "preparation_time": 18
+        },
+        {
+          "name": "Classic Mojito",
+          "description": "Refreshing Cuban cocktail with white rum, fresh mint, lime juice, sugar, and soda water.",
+          "price": 45.0,
+          "category": "Drinks",
+          "preparation_time": 6
+        },
+        {
+          "name": "Aperol Spritz",
+          "description": "Italian aperitif made with Aperol, Prosecco, and a splash of soda, served over ice with an orange slice.",
+          "price": 48.0,
+          "category": "Drinks",
+          "preparation_time": 5
+        },
+        {
+          "name": "Whiskey Sour",
+          "description": "Smooth blend of whiskey, lemon juice, and sugar syrup, shaken and served on the rocks.",
+          "price": 52.0,
+          "category": "Drinks",
+          "preparation_time": 5
+        },
+        {
+          "name": "Margarita",
+          "description": "Classic tequila cocktail with lime juice and triple sec, served with a salted rim.",
+          "price": 49.0,
+          "category": "Drinks",
+          "preparation_time": 4
+        },
+        {
+          "name": "Red Wine Glass",
+          "description": "A smooth glass of dry red wine, full-bodied with a hint of oak and berries.",
+          "price": 38.0,
+          "category": "Drinks",
+          "preparation_time": 1
+        },
+        {
+          "name": "White Wine Glass",
+          "description": "Crisp and refreshing white wine with floral and citrus notes.",
+          "price": 38.0,
+          "category": "Drinks",
+          "preparation_time": 1
+        },
+        {
+          "name": "Craft Beer (Pint)",
+          "description": "Locally brewed craft beer with a balanced hoppy flavor and smooth finish.",
+          "price": 34.0,
+          "category": "Drinks",
+          "preparation_time": 1
+        }
     ]
   }
-  

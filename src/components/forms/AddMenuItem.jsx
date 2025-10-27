@@ -6,7 +6,7 @@ import LoadingScreen from "../../utils/LoadingScreen.jsx";
 import { FormInput } from "./FormInput.jsx";
 import { errorMsg, infoMsg, successMsg } from "../../utils/toastify.js";
 
-function AddMenuItem({ setFormOpen, onSave, selectedItem = null, existingMenu }) {
+function AddMenuItem({ closeForm, onSave, selectedItem = null, existingMenu }) {
     const [isLoading, setIsLoading] = useState(false);
     const isEditMode = !!selectedItem;
 
@@ -45,11 +45,11 @@ function AddMenuItem({ setFormOpen, onSave, selectedItem = null, existingMenu })
                     itemToSave = { id: newId, ...values };
                     updatedMenu = [...existingMenu, itemToSave];
                 };
-
+                console.log(updatedMenu);
+                
                 localStorage.setItem("local-menu", JSON.stringify(updatedMenu));
                 onSave?.(itemToSave);
                 resetForm();
-                setFormOpen(false);
                 successMsg(`Item ${itemToSave.name} ${isEditMode ? "edited" : "added"} successfully!`);
             } catch (err) {
                 errorMsg(`Error: ${err}`);
@@ -94,7 +94,7 @@ function AddMenuItem({ setFormOpen, onSave, selectedItem = null, existingMenu })
                             {isEditMode ? "Save" : "Add"}
                         </button>
                         <button className="submit-btn" type="button"
-                            onClick={() => { setFormOpen(false); formik.resetForm(); }}>
+                            onClick={() => { closeForm(); formik.resetForm(); }}>
                             close
                         </button>
                     </div>
