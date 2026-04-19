@@ -21,12 +21,12 @@
 }
 
 .home-div::before {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    background: linear-gradient(135deg, #1e3c72, #232c3b);
     animation: fade1 85s infinite;
 }
 
 .home-div::after {
-    background: linear-gradient(135deg, #16213e, #0f3460, #1a4d6d);
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     animation: fade2 85s infinite;
 }
 
