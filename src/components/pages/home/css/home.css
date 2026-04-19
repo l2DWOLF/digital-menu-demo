@@ -1,28 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
 
-.home-div{
+.home-div {
     position: relative;
     min-height: 100vh;
     max-width: 100vw;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: .5em;
     padding-bottom: 5em;
+}
 
-    background-image: url('/bg21.jpg');
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: 130% 130%;
+.home-div::before,
+.home-div::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transition: opacity 12s ease-in-out;
+}
+
+.home-div::before {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    animation: fade1 85s infinite;
+}
+
+.home-div::after {
+    background: linear-gradient(135deg, #16213e, #0f3460, #1a4d6d);
+    animation: fade2 85s infinite;
+}
+
+@keyframes fade1 {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade2 {
+
+    0%,
+    50%,
+    100% {
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        opacity: 1;
+    }
 }
 
 
-.home-div h1{
+.home-div h1 {
     padding: unset;
     font-family: "Goldman";
     margin-top: 1em;
 }
-.home-div h2{
+
+.home-div h2 {
     position: absolute;
     top: 126px;
     left: 48%;
@@ -36,7 +79,7 @@
 
 .control-bar {
     position: sticky;
-    top: 0; 
+    top: 0;
     left: 20px;
     width: 90%;
     display: flex;
@@ -50,21 +93,22 @@
     z-index: 5;
 }
 
-.tool-bar, .view-toggle-btns{
+.tool-bar,
+.view-toggle-btns {
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     border-radius: 8px;
     background: #353535;
-} 
+}
 
 .home-div .tool-bar {
     display: flex;
     align-items: center;
     padding: 6px 10px;
-    gap: .7em; 
+    gap: .7em;
 }
 
-.view-toggle-btns{
+.view-toggle-btns {
     font-size: 1.5rem;
     padding: 4px;
 
@@ -74,15 +118,18 @@
     gap: 0;
     border: none;
 }
-.view-toggle-btns button{
+
+.view-toggle-btns button {
     background: unset;
     color: #00ccff;
     border: none;
 }
-.view-toggle-btns button.active{
+
+.view-toggle-btns button.active {
     background: #00ccff;
-    color:black;
+    color: black;
 }
+
 .view-toggle {
     size: 44;
     width: 34px !important;
@@ -91,23 +138,24 @@
     transform: translate(-110px, -23px) !important;
 }
 
-.menu-control{
+.menu-control {
     margin: 2em 0 .5em;
     padding: 4px 1em;
     height: 33px;
     color: #00ccff;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.menu-control p{
+
+.menu-control p {
     font-size: 1.2rem;
     text-shadow: 2px 1px 2px #353535;
     display: none;
 }
 
-.sort-list{
+.sort-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,7 +168,8 @@
 
     transition: .5s;
 }
-.sort-list li{
+
+.sort-list li {
     font-size: 1.1rem;
     font-weight: 600;
     padding: 3px 7px;
@@ -130,28 +179,31 @@
 
     transition: .5s;
 }
-.sort-list li:hover{
+
+.sort-list li:hover {
     background: black;
-    border:1px solid #00aeff;
+    border: 1px solid #00aeff;
 }
-.sort-list li.active{
+
+.sort-list li.active {
     border: 2px solid #00aeff;
 }
 
-.search-input{
+.search-input {
     min-width: 150px;
     max-width: 200px;
     position: absolute;
     right: 50%;
     right: 150px;
 }
+
 .search-input::placeholder {
     color: #ffffff;
     opacity: 0.7;
     font-style: italic;
 }
 
-.menu-display{
+.menu-display {
     font-family: 'Assistant', 'Helvetica' !important;
     width: 80vw;
 
@@ -166,7 +218,8 @@
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
-.menu-display h3{
+
+.menu-display h3 {
     position: absolute;
     top: .5em;
     left: 2em;
@@ -174,9 +227,10 @@
     font-size: 1.7rem;
     font-weight: 600;
     color: snow;
-    text-shadow: -2px 4px 1px #020202 !important; 
-    
+    text-shadow: -2px 4px 1px #020202 !important;
+
 }
+
 .items-counter {
     position: absolute;
     background: #00aeff;
@@ -190,6 +244,7 @@
     z-index: 4;
     border-radius: 20px;
 }
+
 .category-filter {
     min-width: 200px;
     max-width: 200px;
@@ -201,43 +256,51 @@
     padding: 1em;
     margin-top: 1em;
 }
-.category-filter p{
+
+.category-filter p {
     margin-bottom: 1em;
     text-align: left;
     direction: ltr;
     font-size: 1.1rem;
 }
-.category-filter li{
+
+.category-filter li {
     font-size: 1.1rem;
     cursor: pointer;
 }
-.category-filter li:hover, 
+
+.category-filter li:hover,
 .category-filter li.active {
     color: #00aeff;
     text-decoration: underline;
 }
-.menu-display li, .menu-display td, .menu-display p{
+
+.menu-display li,
+.menu-display td,
+.menu-display p {
     font-family: 'Assistant', 'Helvetica';
 }
 
-.grid-view{ 
-    width: 90%; 
+.grid-view {
+    width: 90%;
     max-height: 90cqh;
     color: black;
-    
+
     display: grid;
-    grid-template-columns: repeat(4, 250px);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
     gap: 2em;
     padding: 1em .5em;
-    
+
     overflow-Y: scroll;
 }
-.grid-view, .table-view{
+
+.grid-view,
+.table-view {
     scrollbar-width: thin;
     scrollbar-color: #00aeffbb transparent !important;
 }
 
-.card{
+.card {
     height: 333px;
     text-align: right;
     direction: rtl;
@@ -252,10 +315,12 @@
 
     transition: .5s;
 }
-.card:hover{ 
+
+.card:hover {
     transform: scale(1.05);
     border: 1.5px solid #0047b3;
 }
+
 .card img {
     width: 100%;
     height: 40%;
@@ -263,19 +328,22 @@
     object-position: center center;
 }
 
-.card-data{
+.card-data {
     display: flex;
     flex-direction: column;
     gap: .2em;
     padding: 0px 5px;
 }
-.card h5{
+
+.card h5 {
     border-bottom: 1px dashed rgba(128, 128, 128, 0.308);
 }
-.item-description{
+
+.item-description {
     min-height: 60px;
 }
-.price-prep{
+
+.price-prep {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -284,7 +352,8 @@
     font-weight: 600;
     padding: 3px;
 }
-.manage-card-item{
+
+.manage-card-item {
     padding: 1px 10px;
     display: flex;
     flex-direction: row-reverse;
@@ -294,117 +363,181 @@
     direction: ltr;
     margin: 1px;
 }
+
 .manage-card-item button:hover,
-.table-view button:hover{
+.table-view button:hover {
     background: none;
     color: #00ccff;
 }
 
-.table-view{
+.table-view {
     min-height: 80cqh;
     max-height: 100cqh;
     color: black;
     width: 100%;
     margin: 2em 0 0;
-    padding: 0px 2em;
+    padding: 1.5em 2em;
     align-self: flex-start;
-
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
     overflow-Y: scroll;
     scrollbar-width: thin;
 }
+
 .empty-menu-msg,
 .empty-menu-msg td {
-    height:fit-content;
+    height: fit-content;
     width: 700px;
-
     text-align: center;
     padding: 2em;
-    background: rgba(0, 0, 0, 0.612) !important;
+    background: rgba(0, 0, 0, 0.7) !important;
     position: absolute;
     color: snow;
-    
     direction: ltr !important;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
-.empty-menu-msg span{
+
+.empty-menu-msg span {
     color: #00aeff !important;
     margin: 0 4px;
+    font-weight: 600;
 }
 
 .table-view table {
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.321);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .table-view th,
 .table-view td {
-    padding: 6px;
+    padding: 3px 8px;
     text-align: center;
+    transition: all 0.3s ease;
 }
-.table-view td{
-    border-bottom: 1px solid rgba(255, 94, 0, 0.192);
-    border-left: 1px solid #5757571a;
+
+.table-view td {
+    border-bottom: 1px solid rgba(0, 174, 255, 0.1);
 }
 
 .table-view th {
-    color:snow;
-    background: #00aeffd8;
-    border-left: 1px solid rgba(0, 0, 0, 0.288);
-    border-right: 1px solid rgba(0, 0, 0, 0.295);
-    text-shadow: 2px 2px 2px black;
+    color: snow;
+    background: linear-gradient(135deg, #00aeff 0%, #0088cc 100%);
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
 }
 
-.table-view tbody{
+.table-view tbody {
     position: relative;
 }
-.table-view tbody td{
+
+.table-view tbody tr {
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.table-view tbody tr:nth-child(odd) td {
+    background-color: rgba(255, 255, 255, 0.95);
     direction: rtl;
-    font-weight: 600;
-    background-color: #c4d9f1da;
+    font-weight: 500;
 }
 
-.td-description{
+.table-view tbody tr:nth-child(even) td {
+    background-color: rgba(0, 174, 255, 0.08);
+    direction: rtl;
+    font-weight: 500;
+}
+
+.table-view tbody tr:hover td:not(.table-item-control) {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white !important;
+    box-shadow: inset 0 0 8px rgba(0, 174, 255, 0.2);
+}
+
+.table-view tbody tr:hover .table-item-control {
+    background-color: transparent !important;
+    color: #00aeff;
+}
+
+.td-description {
     text-align: center !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     font-style: italic;
+    color: #555 !important;
+    font-size: 0.95rem;
 }
 
-.table-item-control{
+.table-item-control {
     display: flex;
+    align-items: center;
     justify-content: center;
-}
-.grid-view button,
-.table-item-control button{
-    border: none;
-    color: #353535;
+    background: none !important;
+    gap: 0.5em;
 }
 
-.seed-btn{
+.table-item-control:hover {
+    background: none !important;
+}
+
+.table-item-control button {
+    border: none;
+    background: none;
+    color: #00aeff;
+    padding: 3px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.table-item-control button:hover {
+    background: rgba(0, 174, 255, 0.5);
+    color: black;
+    transform: scale(1.15);
+}
+
+.grid-view button {
+    border: none;
+}
+
+.grid-view button:hover {
+    background: black;
+    color: white;
+}
+
+.seed-btn {
     background: none;
     border: none;
     font-size: 1rem;
 }
-.seed-btn:hover{
+
+.seed-btn:hover {
     font-size: 1rem;
     text-shadow: 2px 2px 1px black;
     background: none;
-    border:none;
+    border: none;
 }
 
-.show-mobile{
+.show-mobile {
     display: none;
 }
-@media (max-width: 1150px) {
 
-    .home-div{
-        background-attachment: scroll;
-        background-size: 140% 140%;
+@media (max-width: 1630px) {
+    .menu-display{
+        width: 90vw;
     }
-    h1{
+}
+@media (max-width: 1200px) {
+
+    h1 {
         font-size: 2.3rem;
         padding-bottom: .5em !important;
     }
-    .home-div h2{
+
+    .home-div h2 {
         top: 85px;
         left: 30%;
         min-width: 230px;
@@ -412,7 +545,7 @@
         color: rgba(255, 255, 255, 0.774);
     }
 
-    .control-bar{
+    .control-bar {
         width: 87%;
         left: 5px;
         flex-direction: row;
@@ -424,81 +557,90 @@
         background: rgba(255, 250, 250, 0);
     }
 
-    .tool-bar button{
+    .tool-bar button {
         font-size: .75rem;
         padding: 3px 6px;
     }
-    .search-input{
+
+    .search-input {
         position: unset;
         min-width: 90px;
         max-width: 90px;
         align-self: flex-start;
-        
+
         border: 0.5px solid #00aeff77;
     }
-    .search-input::placeholder{
+
+    .search-input::placeholder {
         font-size: .8rem;
     }
-    .sort-list{ 
+
+    .sort-list {
         gap: .2em;
     }
-    .sort-list li{
+
+    .sort-list li {
         font-size: .85rem;
     }
 
-    .menu-display{
+    .menu-display {
         background: rgba(255, 250, 250, 0.315);
         border: 1px solid black;
-        width: 90%;
+        width: 95%;
         gap: .5em;
         flex-direction: column-reverse;
         padding: 1em .5em;
     }
-    .menu-display h3{
+
+    .menu-display h3 {
         left: 1em;
         font-size: 1.1rem;
     }
-    .items-counter{
+
+    .items-counter {
         top: 10px;
     }
-    .category-filter{
+
+    .category-filter {
         margin-top: 1.3em;
         min-width: 100%;
         border-left: unset;
         display: flex;
         padding: 0;
     }
-    .category-filter ul{
+
+    .category-filter ul {
         display: flex;
         flex-wrap: wrap;
         gap: .5em;
         list-style-type: none;
     }
-    .category-filter p{
+
+    .category-filter p {
         display: none;
     }
 
-    .table-view{
+    .table-view {
         min-height: 65svh;
         max-height: 65svh;
-        padding: unset;
+        padding: 1em;
     }
-    .table-view th{
+
+    .table-view th {
         font-size: .75rem;
+        padding: 8px 4px !important;
     }
-    .table-view td{
+
+    .table-view td {
         font-size: .9rem;
-    }
-    .table-view th,
-    .table-view td{
-        padding: 1px 3px;
+        padding: 8px 4px !important;
     }
 
-    .table-item-control button{
-        padding: 6px 5px;
+    .table-item-control button {
+        padding: 4px !important;
     }
 
-    .grid-view{
+    .grid-view {
         width: 100%;
         padding: 1em 0;
         max-height: 70cqh;
@@ -508,57 +650,64 @@
         overflow-x: hidden;
     }
 
-    .card{
+    .card {
         position: relative;
         height: 200px;
         justify-content: flex-end;
         background: unset;
     }
-    .card img{
+
+    .card img {
         position: absolute;
         width: 100%;
         height: 100%;
         z-index: -1;
     }
 
-    .card-data{
+    .card-data {
         background: rgba(0, 0, 0, 0.6);
         color: white;
         padding: 2px 3px;
         min-width: 100%;
     }
-    .manage-card-item{
+
+    .manage-card-item {
         padding: 3px 6px 3px 6px;
         justify-content: flex-end;
         background: rgba(0, 0, 0, 0.6);
         margin: 0;
     }
-    .manage-card-item button{
+
+    .manage-card-item button {
         padding: 0;
         color: white;
-        
+
     }
+
     .card h4,
-    .card p{
+    .card p {
         font-size: .8rem;
     }
 
 
     .empty-menu-msg,
-    .empty-menu-msg td{
+    .empty-menu-msg td {
         width: 290px;
         height: 100px;
         padding: .5em;
         font-size: .8rem;
     }
+
     .empty-menu-msg div,
-    .empty-menu-msg span{
+    .empty-menu-msg span {
         font-size: .9rem;
     }
-    .mobile-hide{
+
+    .mobile-hide {
         display: none;
     }
-    .show-mobile{
+
+    .show-mobile {
         display: unset;
     }
 }

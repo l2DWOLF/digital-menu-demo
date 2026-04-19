@@ -45,7 +45,6 @@ function AddMenuItem({ closeForm, onSave, selectedItem = null, existingMenu }) {
                     itemToSave = { id: newId, ...values };
                     updatedMenu = [...existingMenu, itemToSave];
                 };
-                console.log(updatedMenu);
                 
                 localStorage.setItem("local-menu", JSON.stringify(updatedMenu));
                 onSave?.(itemToSave);
